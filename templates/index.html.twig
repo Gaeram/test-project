@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <title>Twig test</title>
     </head>
     <body>
-       <h1>{{ name }}</h1>
+{#       <h1>{{ name }}</h1>#}
+   {% if article.published %}
+    <article style="background-color: {{ article.color }}">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.description }}</p>
+    </article>
+    {% else %}
+    <p>{{ 'Cet article ne peut pas etre publie' }}</p>
+    {% endif %}
+
     </body>
 </html>
