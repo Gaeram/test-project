@@ -5,12 +5,15 @@
         <title>Twig test</title>
     </head>
     <body>
-{#       <h1>{{ name }}</h1>#}
-   {% if article.published %}
+{# <h1>{{ name }}</h1>#}
+
+{# creating condition for published article from Controller#}
+    {% if article.published %}
     <article style="background-color: {{ article.color }}">
         <h2>{{ article.title }}</h2>
         <p>{{ article.description }}</p>
     </article>
+{# Creating a new condition if published article is false#}
     {% else %}
     <p>{{ 'Cet article ne peut pas etre publie' }}</p>
     {% endif %}

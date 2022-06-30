@@ -19,8 +19,10 @@ class BonjourController extends AbstractController
         ]);
     }*/
 
+    // Creating new route for a new page
     #[Route("/article", name: "article")]
     public function article(){
+        // define array as variable
         $article = [
             'title' => 'Musique',
             'color' => 'red',
@@ -29,6 +31,7 @@ class BonjourController extends AbstractController
         ];
 
         return $this->render('index.html.twig', [
+            // return the var as 'article' to use it in .twig
             'article' => $article
         ]);
     }
