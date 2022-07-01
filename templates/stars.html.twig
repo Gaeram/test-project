@@ -2,16 +2,16 @@
 {% include '_header.html.twig' %}
     {% for star in stars %}
         {% if star.published %}
-    <article style="background-color: {{ star.color }}">
-        <h2>{{ star.title }}</h2>
-        {#  <img src="{{ star.image }}" alt="image"> #}
-        <p>publié le : {{star.publishedDate|date("m/d/Y")}}</p>
-        {# Ici on utilise la fonction path qui permets de rediriger par le
-        biais d'un clic vers les infos de l'idiot de la france qu'on à choisi. cette fonction est utilisee
-        car ça dynamise la page et puis permets une redirection généralement sans encombre et rapide.
-        utile dans le cas où nous sommes plusieurs devs à travailler sur le projet #}
-        <a href="{{ path('star', {'id': star.id}) }}">en savoir plus sur l'abruti en question</a>
-    </article>
+            <article style="background-color: {{ star.color }}">
+                <h2>{{ star.title }}</h2>
+                {#  <img src="{{ star.image }}" alt="image"> #}
+                <p>publié le : {{star.publishedDate|date("m/d/Y")}}</p>
+                {# Ici on utilise la fonction path qui permets de rediriger par le
+                biais d'un clic vers les infos de l'idiot de la france qu'on à choisi. cette fonction est utilisee
+                car ça dynamise la page et puis permets une redirection généralement sans encombre et rapide.
+                utile dans le cas où nous sommes plusieurs devs à travailler sur le projet #}
+                <a href="{{ path('star', {'id': star.id}) }}">en savoir plus sur l'abruti en question</a>
+            </article>
         {% else %}
             <p>Cet article n'est pas publié</p>
         {% endif %}
