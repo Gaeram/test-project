@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Stars pourries</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+    {% for star in stars %}
+        {% if star.published %}
+    <article style="background-color: {{ star.color }}">
+        <h2>{{ star.title }}</h2>
+        <img src="{{ star.image }}" alt="image">
+        <p>publié le : {{"now"|date("m/d/Y")}}</p>
+    </article>
+        {% else %}
+        <p>Cet article n'est pas publié</p>
+        {% endif %}
+    {% endfor %}
+
+
+
+
+    </body>
+</html>
