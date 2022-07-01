@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <title>Stars pourries</title>
-        <meta charset="UTF-8">
-    </head>
-    <body>
 
+{% include '_header.html.twig' %}
     {% for star in stars %}
         {% if star.published %}
     <article style="background-color: {{ star.color }}">
@@ -17,9 +11,4 @@
         <p>Cet article n'est pas publié</p>
         {% endif %}
     {% endfor %}
-
-
-
-
-    </body>
-</html>
+{% include '_footer.html.twig' %}

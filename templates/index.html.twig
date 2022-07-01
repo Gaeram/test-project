@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>Twig test</title>
-    </head>
-    <body>
-{# <h1>{{ name }}</h1>#}
 
+{# <h1>{{ name }}</h1>#}
+{% include '_header.html.twig' %}
 {# creating condition for published article from Controller#}
     {% if article.published %}
     <article style="background-color: {{ article.color }}">
@@ -17,6 +11,4 @@
     {% else %}
     <p>{{ 'Cet article ne peut pas être publié' }}</p>
     {% endif %}
-
-    </body>
-</html>
+{% include '_footer.html.twig' %}

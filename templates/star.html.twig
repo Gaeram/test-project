@@ -1,18 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>Stars pourries</title>
-    <meta charset="UTF-8">
-</head>
-<body>
+{% include '_header.html.twig' %}
 {% if debile.published %}
         <article style="background-color: {{ debile.color }}">
             <h2>{{ debile.title }}</h2>
             <img src="{{ debile.image }}" alt="image">
             <p>publié le : {{debile.publishedDate|date("m/d/Y")}}</p>
         </article>
-    {% else %}
-        <p>Cet article n'est pas publié</p>
-    {% endif %}
-</body>
-</html>
+        {% else %}
+            <p>Cet article n'est pas publié</p>
+        {% endif %}
+{% include '_footer.html.twig' %}
