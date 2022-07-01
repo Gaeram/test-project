@@ -11,7 +11,7 @@
     <article style="background-color: {{ star.color }}">
         <h2>{{ star.title }}</h2>
         <img src="{{ star.image }}" alt="image">
-        <p>publié le : {{"now"|date("m/d/Y")}}</p>
+        <p>publié le : {{star.publishedDate|date("m/d/Y")}}</p>
     </article>
         {% else %}
         <p>Cet article n'est pas publié</p>
